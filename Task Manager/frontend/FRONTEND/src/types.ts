@@ -11,6 +11,13 @@ export interface Task{
     duration: number;
     done: boolean;
 }
+export interface TaskCreatePayload{
+    title: string;
+    description?: string;
+    duration: number;
+    start_time?: string;
+    done?: boolean;
+}
 
 export interface AuthResponse{
     msg?: string;

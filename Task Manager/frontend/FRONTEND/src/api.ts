@@ -1,12 +1,10 @@
 import axios from "axios";
-import { Task } from "../types";
-const token = 'your_bearer_token_here'
+import { AuthResponse, Task } from "./types";
 
 const api = axios.create({
-    baseURL:'http://127.0.0.1:5000',
-    header:{'content-type':'application/json'}
-
-})
+    baseURL: 'http://127.0.0.1:5000',
+    headers: {'Content-Type': 'application/json'}
+});
 
 
 export const registerUser =(user: {username: string; password: string}) => api.
