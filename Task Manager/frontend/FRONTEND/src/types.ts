@@ -21,4 +21,5 @@ export interface TaskCreatePayload{
 
 export interface AuthResponse{
     msg?: string;
+    token?: string;
 }

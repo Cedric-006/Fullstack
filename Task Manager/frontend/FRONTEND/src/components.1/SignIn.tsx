@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import {useState }from 'react';
 import { loginUser } from '../api/auth';
 import { AxiosError } from 'axios';
 
 interface SignInProps {
-    onLogin: (token: string)=> void;
-    signupmessage: string | null;
+    onLogin: (token: string) => void; // Function that accepts a string token
+    signupmessage: string | null; // Explicitly typed as string or null
 }
 
-export const SignIn: React.FC<SignInProps> = ({ onLogin, signupmessage }) => 
+export const SignIn: React.FC<SignInProps> = ({ onLogin, signupmessage }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState<string | null>(null);
